@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Summary from './components/Summary';
+import Nav from './components/Nav';
 
 class App extends Component {
   render() {
     return (
       <div className="container mt-3">
-        <Summary/>
+        Junio
+        <Nav/>
       </div>
     );
   }

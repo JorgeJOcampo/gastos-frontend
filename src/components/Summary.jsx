@@ -1,11 +1,31 @@
 import React, { Component } from 'react'
 import './Summary.css'
+import PieGraphic from './PieGraphic'
+import Detail from './Detail';
+
 
 export default class Summary extends Component {
   render() {
+    const products = [
+      {
+        "name": "shampoo",
+        "value": 150,
+        "type": "casa"
+      },
+      {
+        "name": "jabon",
+        "value": 25,
+        "type": "casa"
+      },
+      {
+        "name": "usb",
+        "value": 300,
+        "type": "entretenimiento"
+      }
+    ]
     return (
       <div className="container summary">
-        <div className="row">
+        <div className="row summary">
           <div className="col-6">
             Ingreso
           </div>
@@ -37,6 +57,16 @@ export default class Summary extends Component {
             250  
           </div>
         </div>
+        <div className="row">
+          <div className="col-8">
+            <PieGraphic data={products}/>
+          </div>
+          <div className="col-4">
+            <Detail products={products}/>
+          </div>
+          
+        </div>
+  
       </div>
     )
   }
